@@ -45,7 +45,7 @@ func ValidDigits4To15(s string) bool {
 }
 
 func EscapeLatex(s string) string {
-	s2 := strings.Replace(s, "\\", "\\textbackslash", -1)
+	s2 := strings.Replace(s, "\\", "\\textbackslash ", -1)
 	s2 = strings.Replace(s2, "&", "\\&", -1)
 	s2 = strings.Replace(s2, "%", "\\%", -1)
 	s2 = strings.Replace(s2, "$", "\\$", -1)
@@ -53,8 +53,8 @@ func EscapeLatex(s string) string {
 	s2 = strings.Replace(s2, "_", "\\_", -1)
 	s2 = strings.Replace(s2, "{", "\\{", -1)
 	s2 = strings.Replace(s2, "}", "\\}", -1)
-	s2 = strings.Replace(s2, "~", "\\textasciitilde", -1)
-	return strings.Replace(s2, "^", "\\textasciicircum", -1)
+	s2 = strings.Replace(s2, "~", "\\textasciitilde ", -1)
+	return strings.Replace(s2, "^", "\\textasciicircum ", -1)
 
 }
 
